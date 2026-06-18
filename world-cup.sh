@@ -87,11 +87,7 @@ draw() {
 }
 
 while true; do
-    data=$(curl -fsS "$URL") || {
-        cleanup
-        echo "fetch failed" >&2
-        exit 1
-    }
+    data=$(curl -fsS "$URL")
 
     IFS=$'\t' read -r _ _ status home away score _ < <(extract "$data" "$GAME_ID")
 
