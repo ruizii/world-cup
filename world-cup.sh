@@ -87,7 +87,7 @@ draw() {
 }
 
 while true; do
-    data=$(curl -fsS "$URL")
+    data=$(curl --max-time 20 -fsS "$URL")
 
     IFS=$'\t' read -r _ _ status home away score _ < <(extract "$data" "$GAME_ID")
 
