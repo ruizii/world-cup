@@ -2,7 +2,7 @@
 set -uo pipefail
 
 URL="https://worldcup26.ir/get/games"
-GAME_ID="679c9c8a5749c4077500e024"
+GAME_ID="679c9c8a5749c4077500e025"
 REFRESH=2
 
 GRAY=$(tput dim || true)
